@@ -10,7 +10,7 @@ const TopBannerMixin = () => {
       title: token
         ? ` Welcome ${userdata.firstName + ' ' + userdata.lastName}`
         : 'Welcome to Porto',
-      path: '/proto'
+      path: '/'
     },
     {
       title: 'Blog',
@@ -24,7 +24,7 @@ const TopBannerMixin = () => {
           document.cookie = 'token = '
           $cookies.remove('token')
           localStorage.removeItem('user')
-          location.assign('/porto')
+          location.assign('/')
         }
       }
     },
