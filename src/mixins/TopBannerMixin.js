@@ -7,7 +7,9 @@ const TopBannerMixin = () => {
 
   const links = ref([
     {
-      title: token ? ` Welcome ${userdata.firstName + ' ' + userdata.lastName}` : 'Welcome',
+      title: token
+        ? ` Welcome ${userdata.firstName + ' ' + userdata.lastName}`
+        : 'Welcome to Porto',
       path: '/'
     },
     {
@@ -19,6 +21,7 @@ const TopBannerMixin = () => {
       path: '/login',
       signOutMethod: () => {
         if (token) {
+          document.cookie = 'token = '
           $cookies.remove('token')
           localStorage.removeItem('user')
           location.assign('/')

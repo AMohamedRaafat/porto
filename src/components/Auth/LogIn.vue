@@ -1,7 +1,7 @@
 <template>
     <section class="login  font-poppins text-black">
 
-        <div v-if="!token">
+        <div v-if="!token.slice(6)">
             <div class="dir flex items-center justify-center h-32 bg-slate-100  font-semibold p-10">
                 <h1 class="text-3xl">Customer Login</h1>
             </div>
@@ -59,4 +59,6 @@ const { router,
     loading,
     clickToLogin,
     LoaderVue } = LoginMixin()
+const tokenVal = token
+console.log(tokenVal.slice(6) ? "Token" : 'invalid token')
 </script>
