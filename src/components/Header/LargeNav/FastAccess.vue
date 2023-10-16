@@ -10,7 +10,7 @@
     </button>
     <div class="inline relative">
       <button class="p-2  w-14 text-center relative" @click="handleShowCart">
-        <Icon icon="ph:handbag" class="text-3xl" />
+        <Icon icon="ic:outline-shopping-bag" class="text-3xl" />
         <span
           class="content-[''] absolute p-1 w-6 h-6 top-0 right-2 rounded-full bg-red-700 z-10 text-white text-[12px] font-bold">{{
             cart ? cart.products.length : '0' }}</span>
