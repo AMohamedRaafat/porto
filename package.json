@@ -1,16 +1,20 @@
 {
   "name": "ecommerce-project",
+  "homepage": "https://amohamedraafat.github.io/porto/",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
   },
   "dependencies": {
     "axios": "^1.5.1",
+    "gh-pages": "^6.1.1",
     "pinia": "^2.1.6",
     "swiper": "^10.3.1",
     "vue": "^3.3.4",
